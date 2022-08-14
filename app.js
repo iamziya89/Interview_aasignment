@@ -26,10 +26,16 @@ function myFunction() {
         box.innerHTML = "";
     })
     
-// ===========================================================================
-    
-
-
-
-
-
+    let btn2 = document.getElementById("btn2");
+    btn2.addEventListener("click",function(){
+        let newdiv = document.createElement("div");
+        newdiv.setAttribute("class","box")
+        newdiv.setAttribute("id",`box${count}`)
+        newdiv.innerHTML = ` <div class="color"></div>
+        <div class="write"></div>
+        <div class="font">
+            <span><i class="fa-solid fa-check"></i></span>
+            <span><i class="fa-solid fa-trash"></i></span>
+            <span><i class="fa-solid fa-pen"></i></span>
+            <span id="lock"><i class="fa-solid fa-lock"></i></span>
+        </div>`
