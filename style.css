@@ -1,19 +1,18 @@
-/* Default setting */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* full color of header*/
+
 header {
-  background-color: aqua;
+  background-color:aquamarine;
 }
 
-/* Giving size of header box*/
 .headbox {
   width: 90%;
-  padding: 5px;
+  padding: 4px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -25,8 +24,7 @@ header {
   border-radius: 15px;
 }
 
-/* giving size of  All search boxes*/
-.size{
+.cls{
   display: inline-block;
   width: 50px;
   height: 35px;
@@ -35,7 +33,6 @@ header {
   padding: 5px;
 }
 
-/* giving every box to color */
 h3{
   position: relative;
   bottom: 6px;
@@ -58,22 +55,18 @@ h3{
   background-color: black;
 }
 
-/* botton styling*/
-#btn1{
+#btn{
   width: 100px;
   height: 50px;
-  background-color: orange;
+  background-color: rgb(241, 205, 139);
   margin-top: 5px;
   border-radius: 20px;
 }
 
-/* Hover to btn1 */
 #btn1:hover{
   background-color: red;
   color: white;
 }
-/* ============================================ */
-/* for inputTaker box  */
 
 .inputbox{
   display: flex;
@@ -81,7 +74,6 @@ h3{
   top: 90px;
 }
 
-/* input box  */
 .inputtask{
   width: 320px;
   height: 250px;
@@ -94,7 +86,6 @@ h3{
   font-size: 30px;
 }
 
-/* button 2 style */
 #btn2{
   width: 90px;
   height: 40px;
@@ -103,7 +94,7 @@ h3{
   margin: 150px 130px;
 }
 
-/* sidebar of color picker */
+
 .choosecolor{
   width: 80px;
   height: 250px;
@@ -113,7 +104,7 @@ h3{
   padding: 10px;
 }
 
-/* giving size for choose color box*/
+
 
 .size1{
   display: inline-block;
@@ -125,8 +116,6 @@ h3{
   margin-top: 13px;
   cursor: pointer;
 }
-
-/* Hover to btn2 */
 
 #btn2:hover{
   background-color: red;
@@ -143,61 +132,8 @@ h3{
   padding: 3px;
 }
 
-
-/* ======================= */
-
 .itemcontainer{
   width: 90%;
   margin: 0 auto;
   margin-top: 20px;
-}
-.box{
-  width: 200px;
-  height: 170px;
-  background-color: aqua;
-  display: inline-block;
-  margin-left: 40px;
-  margin-top: 20px;
-}
-
-.color{
-  width: 200px;
-  height: 30px;
-  background-color: yellow;
-}
-.font{
-  width: 200px;
-  height: 25px;
-  margin-top: 100px;
-}
-span{
-  margin-left: 15px;
-  color: white;
-}
-#lock{
-  margin-left: 80px;
-  color: black;
-}
-
-.write{
-  font-size: 20px;
-  font-weight: bold;
-  color: black;
-  margin-left: 10px;
-}
-
-#btn3 {
-  background-color: red;
-}
-
-#btn4 {
-  background-color: yellow;
-}
-
-#btn5 {
-  background-color: blue;
-}
-
-#btn6 {
-  background-color: black;
 }
