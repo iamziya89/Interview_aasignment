@@ -1,107 +1,377 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TO-DO</title>
-    <link rel="stylesheet" href="./reset.css" />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <div class="butnContainer left">
-          <button class="all"></button>
-          <button class="red"></button>
-          <button class="yellow"></button>
-          <button class="blue"></button>
-          <button class="black"></button>
-          
-        </div>
-        <button class="completed "><img src="./thumbs up.png" alt="" width="50px" height="50px"></button>
-        <div class="create right">
-          <button class="createTask">&#43</button>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="main">
-        <div class="overlay">
-        <form action="" class="myForm">
-          <textarea
-            name="select"
-            id="textarea"
-            cols="0"
-            rows="10"
-            class="fInput"
-          ></textarea>
-          <div class="btForm">
-            <div class="dr">
-              <input
-                type="radio"
-                id="red"
-                name="select"
-                value="red"
-                class="ra r1"
-              />
-              <label for="red"></label>
-            </div>
-            <div class="dy">
-              <input
-                type="radio"
-                id="yellow"
-                name="select"
-                value="yellow"
-                class="ra r2"
-              />
-              <label for="yellow"></label>
-            </div>
+body{
+  background-color:rgb(149,155,155) ;
+}
+.header {
+  /* width: 100%;
+    height: 500px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(178, 175, 131);
+  padding: 20px;
+}
+.left button {
+  width: 50px;
+  height: 50px;
+  transition: 900ms;
+}
+.left button:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 900ms;
+}
+.right {
+  margin-right: 20px;
+}
+.all {
+  background-image: linear-gradient(red, yellow, blue, black);
+}
 
-            <div class="db">
-              <input
-                type="radio"
-                id="blue"
-                name="select"
-                value="blue"
-                class="ra r3"
-              />
-              <label for="blue"></label>
-            </div>
-            <div class="dk">
-              <input
-                type="radio"
-                id="black"
-                name="select"
-                value="black"
-                class="ra r4"
-              />
-              <label for="black"></label>
-            </div>
-          </div>
-          <div class="frBtn">
-            <button type="submit" class="submit">&#10003</button>
-          <div class="close">&#10006</div>
-          </div>
-          
-        </form>
-      </div>
+.completed {
+  margin-right: 63%;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(178, 175, 131);
+  border: none;
+}
+.completed:hover {
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.createTask {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(230, 160, 30);
+  font-size: xx-large;
+  font-weight: bolder;
+  font-style: italic;
+  transition: 900ms;
+}
+.createTask:hover {
+  background-color: white;
+  color: black;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: 900ms;
+}
+.myForm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(91, 94, 93);
+  /* position: absolute;
+    top: 35%;
+    right: 35%; */
+  width: 50%;
+  height: 50%;
+  border: 5px dotted black;
 
-      <div class="tasks">
-        <div class="redTask"></div>
-        <div class="yellowTask"></div>
-        <div class="blueTask"></div>
-        <div class="blackTask"></div>
-        
-      </div>
-      <div class="overlay1">
-        <div class="complete "></div>
-      </div>
-      </div>
-      
-      
-     
-    </main>
-    <script src="./script.js"></script>
-  </body>
-</html>
+  /* visibility: hidden; */
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+
+  visibility: hidden;
+  z-index: -10;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.overlay1 {
+  visibility: hidden;
+}
+.open-modal1 {
+  visibility: visible;
+}
+.overlay2 {
+ 
+  visibility: hidden;
+}
+
+.fInput {
+  /* width: 100%; */
+  height: 70%;
+  resize: none;
+  border: none;
+  background-color: cadetblue;
+  color: white;
+  font-size: 70px;
+  padding: 30px;
+  /* border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%; */
+}
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50%;
+  height: 100px;
+  background-color: rgb(201, 63, 47);
+  font-size: large;
+  font-weight: bolder;
+  border: 2px solid black;
+}
+.close:hover {
+  cursor: pointer;
+
+  color: black;
+  background-color: white;
+}
+.submit {
+  width: 50%;
+  height: 105px;
+  background-color: rgb(135, 222, 136);
+  font-size: large;
+  font-weight: bolder;
+}
+.submit:hover {
+  cursor: pointer;
+
+  color: black;
+  background-color: white;
+}
+.frBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+input[type="radio"] {
+
+  transform: scale(4.5);
+}
+.dr {
+  background-color: red;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.dy {
+  background-color: yellow;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.db {
+  background-color: blue;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.dk {
+  background-color: black;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.ra {
+  padding: 30px;
+}
+.btForm {
+  /* padding: 30px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+ 
+  background-color: yellow;
+}
+.blue {
+  background-color: blue;
+}
+.black {
+  background-color: black;
+}
+.task-element-r {
+  /* display: flex;
+  justify-content: space-between; */
+  width: 80%;
+  height: 50%;
+  background-color: rgba(255, 0, 0, 0.551);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20%;
+  border: 3px solid red;
+}
+.task-element-r:hover {
+  border: 3px solid white;
+  background-color: red;
+}
+.task-element-y {
+  width: 80%;
+  height: 50%;
+  background-color: rgba(255, 255, 0, 0.535);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20%;
+  border: 3px solid yellow;
+}
+.task-element-y:hover {
+  border: 3px solid white;
+  background-color: yellow;
+}
+.task-element-b {
+  width: 80%;
+  height: 50%;
+  background-color: rgba(0, 0, 255, 0.506);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20% ;
+  border: 3px solid blue;
+}
+.task-element-b:hover {
+  border: 3px solid white;
+  background-color: blue;
+}
+.task-element-k {
+  width: 80%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.197);
+  padding: 50px;
+  box-shadow: 5px 10px #3a3838;
+  border-radius: 10px;
+  margin: 20% ;
+  border: 3px solid black;
+}
+.task-element-k:hover {
+  border: 3px solid white;
+  background-color: black;
+}
+.redTask,.yellowTask, .blueTask,.blackTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+ 
+}
+.redTaskRe,.yellowTaskRe,.blueTaskRe,.blackTaskRe{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 50px;
+}
+/* .yellowTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.blueTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.blackTask {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+} */
+.tasks {
+  padding: 20px;
+  display: flex;
+  background-color: rgb(149, 155, 155);
+  justify-content: space-between;
+}
+
+.in {
+  text-align: center;
+  width: 100%;
+  height: 90%;
+  resize: none;
+  border-radius: 5px;
+  border: none;
+  color: black;
+
+  font-size: xx-large;
+  font-weight: bolder;
+}
+.task-element-r .in:hover {
+  background-color: red;
+}
+.task-element-y .in:hover {
+  background-color: yellow;
+}
+.task-element-b .in:hover {
+  background-color: blue;
+
+  color: white;
+}
+.task-element-k .in:hover {
+  background-color: black;
+
+  color: white;
+}
+.lock {
+  width: 52px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-image: url(./lock-icon-12.jpg);
+  background-repeat: no-repeat;
+ 
+}
+.igg{
+  background-image: url(./lock-icon-11.jpg);
+}
+.internalDiv{
+  display: flex;
+  justify-content: space-evenly;
+  /* width: 400px; */
+}
+.internalDiv button{
+  font-size: xx-large;
+ 
+  font-weight: bolder;
+  
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+}
+.internalDiv button:hover{
+  border: 2px solid white;
+  cursor: pointer;
+  box-shadow: 10px 5px 10px;
+}
+.check{
+  background-image: url(./thumbs1.jpg);
+  background-repeat: no-repeat;
+}
+.complete{
+  display: flex;
+  height: max-content;
+}

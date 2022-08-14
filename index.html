@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="butnContainer left">
+          <button class="all"></button>
+          <button class="red"></button>
+          <button class="yellow"></button>
+          <button class="blue"></button>
+          <button class="black"></button>
+          
+        </div>
+        <button class="completed "><img src="./thumbs up.png" alt="" width="50px" height="50px"></button>
+        <div class="create right">
+          <button class="createTask">&#43</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main">
+        <div class="overlay">
+        <form action="" class="myForm">
+          <textarea
+            name="select"
+            id="textarea"
+            cols="0"
+            rows="10"
+            class="fInput"
+          ></textarea>
+          <div class="btForm">
+            <div class="dr">
+              <input
+                type="radio"
+                id="red"
+                name="select"
+                value="red"
+                class="ra r1"
+              />
+              <label for="red"></label>
+            </div>
+            <div class="dy">
+              <input
+                type="radio"
+                id="yellow"
+                name="select"
+                value="yellow"
+                class="ra r2"
+              />
+              <label for="yellow"></label>
+            </div>
+
+            <div class="db">
+              <input
+                type="radio"
+                id="blue"
+                name="select"
+                value="blue"
+                class="ra r3"
+              />
+              <label for="blue"></label>
+            </div>
+            <div class="dk">
+              <input
+                type="radio"
+                id="black"
+                name="select"
+                value="black"
+                class="ra r4"
+              />
+              <label for="black"></label>
+            </div>
+          </div>
+          <div class="frBtn">
+            <button type="submit" class="submit">&#10003</button>
+          <div class="close">&#10006</div>
+          </div>
+          
+        </form>
+      </div>
+
+      <div class="tasks">
+        <div class="redTask"></div>
+        <div class="yellowTask"></div>
+        <div class="blueTask"></div>
+        <div class="blackTask"></div>
+        
+      </div>
+      <div class="overlay1">
+        <div class="complete "></div>
+      </div>
+      </div>
+      
+      
+     
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
