@@ -3,8 +3,8 @@ const itemcontainer = document.querySelector("#itembox");
 let body = document.querySelector("body")
 var count = 1;
 
-// Onclick function--------------------------------
 
+// onclick function
 function myFunction() {
     body.style.background = "lightgrey";
     let box = document.getElementById("inputbox");
