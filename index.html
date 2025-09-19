@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/89dc3a6c80.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <header>
-        <div class="headbox">
-            <div class="searchbycolor">
-                <div id="All" class="cls">
-                    <h3>All</h3>
-                </div>
-                <div id="red" class="cls"></div>
-                <div id="yellow" class="cls"></div>
-                <div id="blue" class="cls"></div>
-                <div id="black" class="cls"></div>
-            </div>
-            <div class="headerbtn">
-                <button id="btn" onclick="myFunction()">Create Task</button>
-            </div>
-        </div>
-    </header>
+    <table id="timesheet">
+        <thead>
+        <th>TIMESHEET</th>
+        <th><button id="submit">Submit</button></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>MONDAY</td>
+            <td><input name="monday" /></td>
+        </tr>
+        <tr>
+            <td>TUESDAY</td>
+            <td><input name="tuesday" /></td>
+        </tr>
+        <tr>
+            <td>WEDNESDAY</td>
+            <td><input name="wednesday" /></td>
+        </tr>
+        <tr>
+            <td>THURSDAY</td>
+            <td><input name="thursday" /></td>
+        </tr>
+        <tr>
+            <td>FRIDAY</td>
+            <td><input name="friday" /></td>
+        </tr>
+    </tbody>
+    </table>
 
-    <main>
-        <div class="itemcontainer" id="itembox"></div>
-        <div class="inputbox" id="inputbox"></div>
-    </main>
-
-    <script src="app.js"></script>
+    <script src="App.js"></script>
 </body>
 </html>
